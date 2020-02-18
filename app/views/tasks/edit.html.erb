@@ -1,0 +1,28 @@
+<h1>Update Task</h1>
+
+<%= form_for(@task) do |f| %>
+
+  <div class="form-groupe">
+    <%= f.label :title %>
+    <%= f.text_field :title,  class: 'form-control' %>
+  </div>
+
+  <div class="form-groupe mb-4">
+    <%= f.label :details %>
+    <%= f.text_field :details,  class: 'form-control' %>
+  </div>
+
+  <%= f.submit class: 'btn btn-primary'%>
+
+  <div class="checkbox">
+    <label>
+      <%= f.check_box :completed %> Completed
+    </label>
+  </div>
+
+<% end %>
+
+<hr>
+<%= link_to tasks_path do %>
+  <i class="fa fa-history"></i> Back to list
+<% end %>
